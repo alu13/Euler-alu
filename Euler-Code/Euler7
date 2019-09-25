@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Jun 30 15:55:59 2019
+
+@author: albertlu
+"""
+isPrime = True
+i=1
+j=2
+while i<10001:
+    j+=1
+    isPrime = True
+    for k in range(2, j, 1):
+        if(j%k==0):
+            isPrime = False
+            break
+    if(isPrime):
+        i+=1
+print(j)
+        

@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+"""
+Spyder Editor
+
+This is a temporary script file.
+"""
+total = 0
+true = True
+for i in range(0, 20):
+    true = True
+    for j in range(2, int(i**.5)+1):
+        if i%j == 0:
+            true = False
+    if true:
+        total += i
+print(total)

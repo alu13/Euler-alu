@@ -1,0 +1,76 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jul 17 21:56:18 2019
+
+@author: albertlu
+"""
+def isPrime(n):
+    if n<2:
+        return False
+    for i in range(2, int(n**0.5)+1):
+        if n%i==0:
+            return False
+    return True
+string = ""
+pandigitals = []
+lis = [1,2,3,4,5,6,7,8]
+
+for j in range(0, 8):
+    numj = lis[j]
+    string += str(lis[j])
+    lis.pop(j)
+    for k in range(0, 7):
+        numk = lis[k]
+        string += str(lis[k])
+        lis.pop(k)
+        for l in range(0, 6):
+            numl = lis[l]
+            string += str(lis[l])
+            lis.pop(l)
+            for m in range(0, 5):
+                numm = lis[m]
+                string += str(lis[m])
+                lis.pop(m)
+                for n in range(0, 4):
+                    numn = lis[n]
+                    string += str(lis[n])
+                    lis.pop(n)
+                    for o in range(0, 3):
+                        numo = lis[o]
+                        string += str(lis[o])
+                        lis.pop(o)
+                        for p in range(0, 2):
+                            nump = lis[p]
+                            string += str(lis[p])
+                            lis.pop(p)
+                            for q in range(0,1): 
+                                string += str((lis[q]))
+                                if isPrime(int(string)):
+                                    print(string)
+                                string  = string[:-1]
+                            lis.append(nump)
+                            lis.sort()
+                            string  = string[:-1]
+                        lis.append(numo)
+                        lis.sort()
+                        string  = string[:-1]
+                    lis.append(numn)
+                    lis.sort()
+                    string  = string[:-1]
+                lis.append(numm)
+                lis.sort()
+                string  = string[:-1]
+            lis.append(numl)
+            lis.sort()
+            string  = string[:-1]
+        lis.append(numk)
+        lis.sort()
+        string  = string[:-1]
+    lis.append(numj)
+    lis.sort()
+    string  = string[:-1]
+ 
+                             
+
+                                        

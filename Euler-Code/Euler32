@@ -1,0 +1,35 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jul 12 18:59:43 2019
+
+@author: albertlu
+"""
+lis = []
+results = []
+numbers = []
+for i in range(1, 100):
+    for j in range(100, 10000):
+        if len(str(i*j)) == 4:
+            lis = []
+            dorito = True
+            for k in range(0, len(str(i))):
+                lis.append(int(str(i)[k]))
+            for l in range(0, len(str(j))):
+                lis.append(int(str(j)[l]))
+            for m in range(0, len(str(i*j))):
+                lis.append(int(str(i*j)[m]))
+            for n in range(1, 10):
+                if n not in lis:
+                    dorito = False
+            if dorito:
+                results.append(i*j)
+                numbers.append(i)
+                numbers.append(j)
+print(numbers)
+print(results)
+
+total = 0
+for num in results:
+    total += num
+print(total-5796-5346)

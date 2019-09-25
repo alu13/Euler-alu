@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Jul  7 10:44:05 2019
+
+@author: albertlu
+"""
+max = 0
+index = 0
+for i in range(1, 1000000, 1):
+    n=0
+    k=i
+    while(i != 1):
+        if(i%2==0):
+            i = i/2
+            n+=1
+        else:
+            i = 3*i+1
+            n+=1
+    if n>max:
+        max = n
+        index = k
+print(max)
+print(index)

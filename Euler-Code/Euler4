@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Jun 30 13:50:09 2019
+
+@author: albertlu
+"""
+maxi = 0
+number1 = 0
+number2 = 0
+for i in range(999, 0, -1):
+    for j in range(999, 0, -1):
+        if(str(i*j) == str(i*j)[::-1]):
+            if(i*j>maxi):
+                maxi = i*j
+                number1 = i
+                number2 = j
+print(maxi)
+print(number1)
+print(number2)
+            
+    

@@ -1,1 +1,1 @@
-# Euler-alu
+Hello, this repository contains all of my (Albert Lu)'s Project Euler code. It doesn't contain all of the problems because I completed many of them on my desktop at home (I'm at Georgia Tech). Thanks for looking!

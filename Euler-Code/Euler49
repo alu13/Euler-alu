@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Sep 22 01:27:23 2019
+
+@author: albertlu
+"""
+from itertools import permutations
+import math
+def isPrime(n):
+    if n<2:
+        return False
+    for i in range(2, int(math.sqrt(n))+1):
+        if n%i == 0:
+            return False
+    return True
+def permute(a, l, r):
+    arr1 = []
+    if l == r:
+        arr1.append[a]
+    else:
+        for i in range(l, r+1):
+            a[l], a[i] = a[i], a[l]
+            permute(a, l+1, r)
+            a[l], a[i] = a[i], a[l]
+    return arr1
+print(permute("Albert", 0, 6))
+arr = []
+for i in range(0, 10):
+    for j in range(i, 10):
+        for k in range(j, 10):
+            for l in range(k, 10):
+                arr.append(permutations(str(i)+str(j)+str(k)+str(l)))
+finalList = []
+# =============================================================================
+# for i in range(len(arr)):
+#     total = 0
+#     for perm in list(arr[i]):
+#         if isPrime(int(perm)):
+#             total += 1
+#         if total>= 3:
+#             finalList.append(perm)
+# =============================================================================
+# for i in range(len(finalList)):
+    # for perm in list(finalList[i]):
+        # print(''.join(perm))
+                
